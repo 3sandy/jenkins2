@@ -22,7 +22,7 @@
 	
 	<profiles>
 		<profile>
-			<id>class1</id>
+			<id>contact</id>
 			<build>
 				<plugins>
 
@@ -42,7 +42,7 @@
 		</profile>
 
 		<profile>
-			<id>class2</id>
+			<id>org</id>
 			<build>
 				<plugins>
 
@@ -61,6 +61,26 @@
 			</build>
 		</profile>
 		
+			<profile>
+			<id>batch</id>
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M7</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>testng_batch.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+
 	</profiles>
 
 
